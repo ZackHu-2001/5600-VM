@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/TLB.dir/main.cpp.o CMakeFiles/TLB.dir/TLB.cpp.o CMakeFiles/TLB.dir/MMU.cpp.o CMakeFiles/TLB.dir/Policy/Policy.cpp.o CMakeFiles/TLB.dir/Policy/FIFO.cpp.o CMakeFiles/TLB.dir/Policy/LRU.cpp.o CMakeFiles/TLB.dir/Policy/RAND.cpp.o CMakeFiles/TLB.dir/Policy/CLOCK.cpp.o -o TLB 
