@@ -10,7 +10,7 @@
 class RAND : public Policy {
 public:
     RAND() = default;
-    bool search(std::queue<int> entries, int page, int entryCnt) override;
+    bool search(std::queue<int> *entries, int page, int entryCnt) override;
     int replace(std::queue<int> *entries, int page, int entryCnt) override;
 };
 

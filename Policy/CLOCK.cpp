@@ -4,7 +4,7 @@
 
 #include "CLOCK.h"
 
-bool CLOCK::search(std::queue<int> entries, int page, int entryCnt) {
+bool CLOCK::search(std::queue<int> *entries, int page, int entryCnt) {
     return Policy::search(entries, page, 0);
 }
 

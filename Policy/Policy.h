@@ -9,7 +9,7 @@
 
 class Policy {
 public:
-    virtual bool search(std::queue<int> entries, int page, int entryCnt);
+    virtual bool search(std::queue<int> *entries, int page, int entryCnt);
     virtual int replace(std::queue<int> *entries, int page, int entryCnt);
 };
 

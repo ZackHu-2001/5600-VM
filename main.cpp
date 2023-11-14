@@ -10,7 +10,7 @@ int main() {
     int L1_TLB_ENTRY_CNT = 8;
     int L2_TLB_ENTRY_CNT = 16;
     int PAGE_SIZE = 4096;
-    std::string REPLACE_POLICY = "FIFO";
+    std::string REPLACE_POLICY = "RAND";
 
     std::vector<int> workload;
     workload.push_back(1);
@@ -22,22 +22,23 @@ int main() {
     workload.push_back(7);
     workload.push_back(8);
 
-    workload.push_back(2);
-    workload.push_back(3);
-    workload.push_back(4);
-    workload.push_back(5);
-    workload.push_back(6);
-    workload.push_back(7);
-    workload.push_back(8);
+//    workload.push_back(2);
+//    workload.push_back(3);
+//    workload.push_back(4);
+//    workload.push_back(5);
+//    workload.push_back(6);
+//    workload.push_back(7);
+//    workload.push_back(8);
 
-//    workload.push_back(9);
-//    workload.push_back(10);
-//    workload.push_back(11);
+    workload.push_back(9);
+    workload.push_back(10);
+    workload.push_back(11);
 
     Policy* policy;
     if (REPLACE_POLICY == "FIFO") {
         policy = new FIFO();
     } else if (REPLACE_POLICY == "LRU") {
+        std::cout << "here" << std::endl;
         policy = new LRU();
     } else if (REPLACE_POLICY.compare("RAND") == 0) {
         policy = new RAND();

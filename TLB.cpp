@@ -7,8 +7,7 @@
 #include "TLB.h"
 #include "Policy/FIFO.h"
 
-TLB::TLB(int entryCnt, Policy* policy) : entryCnt(entryCnt), policy(policy) {
-}
+TLB::TLB(int entryCnt, Policy* policy) : entryCnt(entryCnt), policy(policy) {}
 
 
 int TLB::replaceOrAdd(int page) {
@@ -16,7 +15,7 @@ int TLB::replaceOrAdd(int page) {
 }
 
 bool TLB::search(int page) {
-    return policy->search(entries, page, entryCnt);
+    return policy->search(&entries, page, entryCnt);
 }
 
 std::string TLB::toString() {

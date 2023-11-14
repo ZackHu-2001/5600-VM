@@ -5,17 +5,8 @@
 #include "FIFO.h"
 #include <iostream>
 
-bool FIFO::search(std::queue<int> entries, int page, int entryCnt) {
-    bool found = false;
-    std::queue<int> tempQueue(entries);
-    while (!tempQueue.empty()) {
-        if (tempQueue.front() == page) {
-            found = true;
-            break;
-        }
-        tempQueue.pop(); // Remove the front element for the next iteration
-    }
-    return found;
+bool FIFO::search(std::queue<int> *entries, int page, int entryCnt) {
+    return Policy::search(entries, page, 0);
 }
 
 int FIFO::replace(std::queue<int> *entries, int page, int entryCnt) {
