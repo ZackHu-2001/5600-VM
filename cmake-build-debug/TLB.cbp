@@ -17,8 +17,8 @@
 					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="TLB">
-				<Option output="/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug/TLB" prefix_auto="0" extension_auto="0"/>
+			<Target title="main.cpp">
+				<Option output="/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug/main.cpp" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -33,14 +33,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug/Makefile&quot;  VERBOSE=1 TLB"/>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug/Makefile&quot;  VERBOSE=1 main.cpp"/>
 					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="TLB/fast">
-				<Option output="/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug/TLB" prefix_auto="0" extension_auto="0"/>
+			<Target title="main.cpp/fast">
+				<Option output="/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug/main.cpp" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -55,7 +55,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug/Makefile&quot;  VERBOSE=1 TLB/fast"/>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug/Makefile&quot;  VERBOSE=1 main.cpp/fast"/>
 					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -83,49 +83,46 @@
 			</Target>
 		</Build>
 		<Unit filename="/mnt/c/Users/zackHu/CLionProjects/TLB/MMU.cpp">
-			<Option target="TLB"/>
+			<Option target="main.cpp"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/zackHu/CLionProjects/TLB/MMU.h">
-			<Option target="TLB"/>
+			<Option target="main.cpp"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/zackHu/CLionProjects/TLB/Policy/CLOCK.cpp">
-			<Option target="TLB"/>
+			<Option target="main.cpp"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/zackHu/CLionProjects/TLB/Policy/CLOCK.h">
-			<Option target="TLB"/>
+			<Option target="main.cpp"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/zackHu/CLionProjects/TLB/Policy/FIFO.cpp">
-			<Option target="TLB"/>
+			<Option target="main.cpp"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/zackHu/CLionProjects/TLB/Policy/FIFO.h">
-			<Option target="TLB"/>
+			<Option target="main.cpp"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/zackHu/CLionProjects/TLB/Policy/LRU.cpp">
-			<Option target="TLB"/>
+			<Option target="main.cpp"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/zackHu/CLionProjects/TLB/Policy/LRU.h">
-			<Option target="TLB"/>
+			<Option target="main.cpp"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/zackHu/CLionProjects/TLB/Policy/Policy.cpp">
-			<Option target="TLB"/>
+			<Option target="main.cpp"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/zackHu/CLionProjects/TLB/Policy/Policy.h">
-			<Option target="TLB"/>
+			<Option target="main.cpp"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/zackHu/CLionProjects/TLB/Policy/RAND.cpp">
-			<Option target="TLB"/>
+			<Option target="main.cpp"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/zackHu/CLionProjects/TLB/Policy/RAND.h">
-			<Option target="TLB"/>
+			<Option target="main.cpp"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/zackHu/CLionProjects/TLB/TLB.cpp">
-			<Option target="TLB"/>
+			<Option target="main.cpp"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/zackHu/CLionProjects/TLB/TLB.h">
-			<Option target="TLB"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/zackHu/CLionProjects/TLB/main.cpp">
-			<Option target="TLB"/>
+			<Option target="main.cpp"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/zackHu/CLionProjects/TLB/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

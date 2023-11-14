@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TLB
+# Target rules for targets named main.cpp
 
 # Build rule for target.
-TLB: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TLB
-.PHONY : TLB
+main.cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main.cpp
+.PHONY : main.cpp
 
 # fast build rule for target.
-TLB/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/build
-.PHONY : TLB/fast
+main.cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/build
+.PHONY : main.cpp/fast
 
 MMU.o: MMU.cpp.o
 .PHONY : MMU.o
 
 # target to build an object file
 MMU.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/MMU.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/MMU.cpp.o
 .PHONY : MMU.cpp.o
 
 MMU.i: MMU.cpp.i
@@ -142,7 +142,7 @@ MMU.i: MMU.cpp.i
 
 # target to preprocess a source file
 MMU.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/MMU.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/MMU.cpp.i
 .PHONY : MMU.cpp.i
 
 MMU.s: MMU.cpp.s
@@ -150,7 +150,7 @@ MMU.s: MMU.cpp.s
 
 # target to generate assembly for a file
 MMU.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/MMU.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/MMU.cpp.s
 .PHONY : MMU.cpp.s
 
 Policy/CLOCK.o: Policy/CLOCK.cpp.o
@@ -158,7 +158,7 @@ Policy/CLOCK.o: Policy/CLOCK.cpp.o
 
 # target to build an object file
 Policy/CLOCK.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/Policy/CLOCK.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Policy/CLOCK.cpp.o
 .PHONY : Policy/CLOCK.cpp.o
 
 Policy/CLOCK.i: Policy/CLOCK.cpp.i
@@ -166,7 +166,7 @@ Policy/CLOCK.i: Policy/CLOCK.cpp.i
 
 # target to preprocess a source file
 Policy/CLOCK.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/Policy/CLOCK.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Policy/CLOCK.cpp.i
 .PHONY : Policy/CLOCK.cpp.i
 
 Policy/CLOCK.s: Policy/CLOCK.cpp.s
@@ -174,7 +174,7 @@ Policy/CLOCK.s: Policy/CLOCK.cpp.s
 
 # target to generate assembly for a file
 Policy/CLOCK.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/Policy/CLOCK.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Policy/CLOCK.cpp.s
 .PHONY : Policy/CLOCK.cpp.s
 
 Policy/FIFO.o: Policy/FIFO.cpp.o
@@ -182,7 +182,7 @@ Policy/FIFO.o: Policy/FIFO.cpp.o
 
 # target to build an object file
 Policy/FIFO.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/Policy/FIFO.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Policy/FIFO.cpp.o
 .PHONY : Policy/FIFO.cpp.o
 
 Policy/FIFO.i: Policy/FIFO.cpp.i
@@ -190,7 +190,7 @@ Policy/FIFO.i: Policy/FIFO.cpp.i
 
 # target to preprocess a source file
 Policy/FIFO.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/Policy/FIFO.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Policy/FIFO.cpp.i
 .PHONY : Policy/FIFO.cpp.i
 
 Policy/FIFO.s: Policy/FIFO.cpp.s
@@ -198,7 +198,7 @@ Policy/FIFO.s: Policy/FIFO.cpp.s
 
 # target to generate assembly for a file
 Policy/FIFO.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/Policy/FIFO.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Policy/FIFO.cpp.s
 .PHONY : Policy/FIFO.cpp.s
 
 Policy/LRU.o: Policy/LRU.cpp.o
@@ -206,7 +206,7 @@ Policy/LRU.o: Policy/LRU.cpp.o
 
 # target to build an object file
 Policy/LRU.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/Policy/LRU.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Policy/LRU.cpp.o
 .PHONY : Policy/LRU.cpp.o
 
 Policy/LRU.i: Policy/LRU.cpp.i
@@ -214,7 +214,7 @@ Policy/LRU.i: Policy/LRU.cpp.i
 
 # target to preprocess a source file
 Policy/LRU.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/Policy/LRU.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Policy/LRU.cpp.i
 .PHONY : Policy/LRU.cpp.i
 
 Policy/LRU.s: Policy/LRU.cpp.s
@@ -222,7 +222,7 @@ Policy/LRU.s: Policy/LRU.cpp.s
 
 # target to generate assembly for a file
 Policy/LRU.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/Policy/LRU.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Policy/LRU.cpp.s
 .PHONY : Policy/LRU.cpp.s
 
 Policy/Policy.o: Policy/Policy.cpp.o
@@ -230,7 +230,7 @@ Policy/Policy.o: Policy/Policy.cpp.o
 
 # target to build an object file
 Policy/Policy.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/Policy/Policy.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Policy/Policy.cpp.o
 .PHONY : Policy/Policy.cpp.o
 
 Policy/Policy.i: Policy/Policy.cpp.i
@@ -238,7 +238,7 @@ Policy/Policy.i: Policy/Policy.cpp.i
 
 # target to preprocess a source file
 Policy/Policy.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/Policy/Policy.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Policy/Policy.cpp.i
 .PHONY : Policy/Policy.cpp.i
 
 Policy/Policy.s: Policy/Policy.cpp.s
@@ -246,7 +246,7 @@ Policy/Policy.s: Policy/Policy.cpp.s
 
 # target to generate assembly for a file
 Policy/Policy.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/Policy/Policy.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Policy/Policy.cpp.s
 .PHONY : Policy/Policy.cpp.s
 
 Policy/RAND.o: Policy/RAND.cpp.o
@@ -254,7 +254,7 @@ Policy/RAND.o: Policy/RAND.cpp.o
 
 # target to build an object file
 Policy/RAND.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/Policy/RAND.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Policy/RAND.cpp.o
 .PHONY : Policy/RAND.cpp.o
 
 Policy/RAND.i: Policy/RAND.cpp.i
@@ -262,7 +262,7 @@ Policy/RAND.i: Policy/RAND.cpp.i
 
 # target to preprocess a source file
 Policy/RAND.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/Policy/RAND.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Policy/RAND.cpp.i
 .PHONY : Policy/RAND.cpp.i
 
 Policy/RAND.s: Policy/RAND.cpp.s
@@ -270,7 +270,7 @@ Policy/RAND.s: Policy/RAND.cpp.s
 
 # target to generate assembly for a file
 Policy/RAND.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/Policy/RAND.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Policy/RAND.cpp.s
 .PHONY : Policy/RAND.cpp.s
 
 TLB.o: TLB.cpp.o
@@ -278,7 +278,7 @@ TLB.o: TLB.cpp.o
 
 # target to build an object file
 TLB.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/TLB.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/TLB.cpp.o
 .PHONY : TLB.cpp.o
 
 TLB.i: TLB.cpp.i
@@ -286,7 +286,7 @@ TLB.i: TLB.cpp.i
 
 # target to preprocess a source file
 TLB.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/TLB.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/TLB.cpp.i
 .PHONY : TLB.cpp.i
 
 TLB.s: TLB.cpp.s
@@ -294,32 +294,8 @@ TLB.s: TLB.cpp.s
 
 # target to generate assembly for a file
 TLB.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/TLB.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/TLB.cpp.s
 .PHONY : TLB.cpp.s
-
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TLB.dir/build.make CMakeFiles/TLB.dir/main.cpp.s
-.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -329,7 +305,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... TLB"
+	@echo "... main.cpp"
 	@echo "... MMU.o"
 	@echo "... MMU.i"
 	@echo "... MMU.s"
@@ -351,9 +327,6 @@ help:
 	@echo "... TLB.o"
 	@echo "... TLB.i"
 	@echo "... TLB.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

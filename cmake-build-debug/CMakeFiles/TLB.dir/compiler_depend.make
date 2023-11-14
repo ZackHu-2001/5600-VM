@@ -1441,6 +1441,11 @@ CMakeFiles/TLB.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/c++/11/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/bits/sstream.tcc \
   ../MMU.h \
   ../Policy/Policy.h \
   /usr/include/c++/11/queue \
@@ -1462,6 +1467,8 @@ CMakeFiles/TLB.dir/main.cpp.o: ../main.cpp \
   ../Policy/RAND.h \
   ../Policy/CLOCK.h
 
+
+/usr/include/strings.h:
 
 ../main.cpp:
 
@@ -1847,6 +1854,8 @@ CMakeFiles/TLB.dir/main.cpp.o: ../main.cpp \
 
 /usr/include/c++/11/stdexcept:
 
+/usr/include/string.h:
+
 /usr/include/c++/11/bits/streambuf.tcc:
 
 /usr/include/c++/11/tr1/bessel_function.tcc:
@@ -1886,6 +1895,8 @@ CMakeFiles/TLB.dir/main.cpp.o: ../main.cpp \
 /usr/include/c++/11/bits/uses_allocator.h:
 
 /usr/include/c++/11/bits/quoted_string.h:
+
+/usr/include/c++/11/cstring:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 

@@ -52,15 +52,15 @@ void MMU::start() {
     double L2TLBMissRate = static_cast<double>(pageLookUpTime)/l2AccessTime;
 
     std::cout << std::endl << "Work load reached the end. Statistics of this run: " << std::endl;
-    std::cout << "Total page accessed: " << workloadCnt << std::endl;
+    std::cout << "Total page accessed       : " << workloadCnt << std::endl;
+    std::cout << "Page table look up time   : " << pageLookUpTime << std::endl;
 
-    std::cout << "L1 access time: " << l1AccessTime << std::endl;
-    std::cout << "L2 access time: " << l2AccessTime << std::endl;
-    std::cout << "Page table look up time: " << pageLookUpTime << std::endl;
-    std::cout << "L1 TLB miss rate: ";
+    std::cout << "L1 access time            : " << l1AccessTime << std::endl;
+    std::cout << "L2 access time            : " << l2AccessTime << std::endl;
+    std::cout << "L1 TLB miss rate          : ";
     std::cout << std::fixed << std::setprecision(2) << L1TLBMissRate * 100 << "%" << std::endl;
 
-    std::cout << "L2 TLB miss rate: ";
+    std::cout << "L2 TLB miss rate          : ";
     std::cout << std::fixed << std::setprecision(2) << L2TLBMissRate * 100 << "%" << std::endl;
 
 
