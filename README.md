@@ -1,4 +1,6 @@
 # 5600-VM
+```zsh
+$./TLB -h
 Usage: ./TLB [OPTIONS]...
 
 Supported options:
@@ -18,3 +20,5 @@ Supported options:
 	l2 TLB policy (FIFO, LRU, RAND)
 -w,    --workload = WORKLOAD
 	path to workload file, workload is represented by list of page to be accessed
+
+```
