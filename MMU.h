@@ -11,14 +11,15 @@
 
 class MMU {
 public:
-    MMU(TLB* TLB_L1, TLB* TLB_L2, int pageSize, std::vector<int> *workload);
+    MMU(TLB* TLB_L1, TLB* TLB_L2, int pageSize, std::vector<int> *workload, int PT_walk_time);
     void start();
+    void printResult(int l1AccessTime, int l2AccessTime, int pageLookUpTime);
 private:
     TLB* TLB_L1;
     TLB* TLB_L2;
+    int PT_walk_time;
     int pageSize;
     std::vector<int>* workload;
-
 };
 
 

@@ -7,7 +7,8 @@
 #include "TLB.h"
 #include "Policy/FIFO.h"
 
-TLB::TLB(int entryCnt, Policy* policy) : entryCnt(entryCnt), policy(policy) {}
+TLB::TLB(int entryCnt, Policy* policy, int access_time) :
+entryCnt(entryCnt), policy(policy), access_time(access_time) {}
 
 
 int TLB::replaceOrAdd(int page) {
@@ -16,6 +17,10 @@ int TLB::replaceOrAdd(int page) {
 
 bool TLB::search(int page) {
     return policy->search(&entries, page, entryCnt);
+}
+
+int TLB::getAccessTime() {
+    return access_time;
 }
 
 std::string TLB::toString() {

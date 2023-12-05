@@ -1,4 +1,4 @@
-C:\WINDOWS\system32\wsl.exe --distribution Ubuntu --exec /bin/bash -c "export CMAKE_COLOR_DIAGNOSTICS=ON && export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd /mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' -S /mnt/c/Users/zackHu/CLionProjects/TLB -B /mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug"
--- Configuring done
--- Generating done
--- Build files have been written to: /mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/zackhu/CLionProjects/5600-VM -B /Users/zackhu/CLionProjects/5600-VM/cmake-build-debug
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zackhu/CLionProjects/5600-VM/cmake-build-debug

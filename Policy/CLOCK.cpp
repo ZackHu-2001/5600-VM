@@ -13,15 +13,6 @@ bool CLOCK::search(std::queue<int> *entries, int page, int entryCnt) {
         }
     }
 
-    printf("memory: [");
-    for (int i=0; i<entryCnt; i++) {
-        if (i == entryCnt - 1) {
-            printf("%d]\n", this->memory[i]);
-        } else {
-            printf("%d, ", this->memory[i]);
-        }
-    }
-
     bool found = false;
 
     std::queue<int> tempQueue = *entries;
@@ -29,11 +20,21 @@ bool CLOCK::search(std::queue<int> *entries, int page, int entryCnt) {
     while (!tempQueue.empty()) {
         if (tempQueue.front() == page) {
             found = true;
-            this->memory[counter] += 1;
+            this->memory[counter] = 1;
             break;
         }
         tempQueue.pop(); // Remove the front element for the next iteration
         counter += 1;
+    }
+
+
+    printf("memory: [");
+    for (int i=0; i<entryCnt; i++) {
+        if (i == entryCnt - 1) {
+            printf("%d]\n", this->memory[i]);
+        } else {
+            printf("%d, ", this->memory[i]);
+        }
     }
     return found;
 }
@@ -47,23 +48,32 @@ int CLOCK::replace(std::queue<int> *entries, int page, int entryCnt) {
     if (entries->size() < entryCnt) {
         entries->push(page);
     } else if (entries->size() == entryCnt) {
-        if (this->memory[0] > 0) {
-            int tmp = this->memory[0] - 1;
-            for (int i=0; i<entryCnt-1; i++) {
-                this->memory[i] = this->memory[i + 1];
-            }
-            this->memory[entryCnt - 1] = tmp;
-            entries->push(entries->front());
-            entries->pop();
-        } else {
-            for (int i=0; i<entryCnt-1; i++) {
-                this->memory[i] = this->memory[i+1];
+        while (this->memory[0] > 0) {
+            for (int j=0; j<entryCnt-1; j++) {
+                this->memory[j] = this->memory[j + 1];
             }
             this->memory[entryCnt - 1] = 0;
-            result = entries->front();
+            entries->push(entries->front());
             entries->pop();
-            entries->push(page);
+        }
+        for (int j=0; j<entryCnt-1; j++) {
+            this->memory[j] = this->memory[j + 1];
+        }
+        this->memory[entryCnt - 1] = 0;
+
+        result = entries->front();
+        entries->pop();
+        entries->push(page);
+    }
+
+    printf("memory: [");
+    for (int i=0; i<entryCnt; i++) {
+        if (i == entryCnt - 1) {
+            printf("%d]\n", this->memory[i]);
+        } else {
+            printf("%d, ", this->memory[i]);
         }
     }
+    printf("\nleave: %d\n", result);
     return result;
 }

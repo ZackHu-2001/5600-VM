@@ -11,14 +11,16 @@
 
 class TLB {
 public:
-    TLB(int entryCnt, Policy* policy);
+    TLB(int entryCnt, Policy* policy, int access_time);
     int replaceOrAdd(int page);
     bool search(int page);
+    int getAccessTime();
     std::string toString();
 private:
     Policy* policy;
-    std::queue<int> entries;
     int entryCnt;
+    int access_time;
+    std::queue<int> entries;
 };
 
 

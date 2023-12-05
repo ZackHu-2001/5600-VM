@@ -27,7 +27,11 @@ int main(int argc, char** argv) {
     // default parameters
     int L1_TLB_ENTRY_CNT = 8;
     int L2_TLB_ENTRY_CNT = 16;
+    int L1_ACCESS_TIME = 5;
+    int L2_ACCESS_TIME = 15;
+    int PT_walk_time = 50;
     int PAGE_SIZE = 4096;
+
     std::string L1_REPLACE_POLICY = "LRU";
     std::string L2_REPLACE_POLICY = "LRU";
 
@@ -57,6 +61,20 @@ int main(int argc, char** argv) {
                 L2_TLB_ENTRY_CNT = std::stoi(argv[i + 1]);
             } else {
                 std::cerr << "Missing argument after -l2" << std::endl;
+                return 1;
+            }
+        } else if (strcmp(argv[i], "-l1t") == 0) {
+            if (i + 1 < argc) {
+                L1_ACCESS_TIME = std::stoi(argv[i + 1]);
+            } else {
+                std::cerr << "Missing argument after -l1t" << std::endl;
+                return 1;
+            }
+        } else if (strcmp(argv[i], "-l2t") == 0) {
+            if (i + 1 < argc) {
+                L2_ACCESS_TIME = std::stoi(argv[i + 1]);
+            } else {
+                std::cerr << "Missing argument after -l2t" << std::endl;
                 return 1;
             }
         } else if (strcmp(argv[i], "-l1p") == 0) {
@@ -110,6 +128,8 @@ int main(int argc, char** argv) {
             std::puts("-s,    --size = PAGE_SIZE\n\tsize of the page");
             std::puts("-l1,   --l1tlb = L1_TLB_ENTRY_CNT\n\tl1 TLB entry count");
             std::puts("-l2,   --l2tlb = L2_TLB_ENTRY_CNT\n\tl2 TLB entry count");
+            std::puts("-l1t,  --l1tlbTime = L1_ACCESS_TIME\n\tl1 TLB access time");
+            std::puts("-l2t,  --l2tlbTime = L2_ACCESS_TIME\n\tl2 TLB access time");
             std::puts("-l1p,  --l1tlbPolicy = L1_TLB_POLICY\n\tl1 TLB policy (FIFO, LRU, RAND)");
             std::puts("-l2p,  --l2tlbPolicy = L2_TLB_POLICY\n\tl2 TLB policy (FIFO, LRU, RAND)");
             std::puts("-w,    --workload = WORKLOAD\n\tpath to workload file, workload is represented by list of page to be accessed");
@@ -118,8 +138,8 @@ int main(int argc, char** argv) {
         i += 2;
     }
 
-    TLB* TLB_L1 = new TLB(L1_TLB_ENTRY_CNT, l1policy);
-    TLB* TLB_L2 = new TLB(L2_TLB_ENTRY_CNT, l2policy);
+    TLB* TLB_L1 = new TLB(L1_TLB_ENTRY_CNT, l1policy, L1_ACCESS_TIME);
+    TLB* TLB_L2 = new TLB(L2_TLB_ENTRY_CNT, l2policy, L2_ACCESS_TIME);
 
     std::cout << "Configurations: " << std::endl;
     std::cout << "L1_TLB_ENTRY_CNT :  " << L1_TLB_ENTRY_CNT << std::endl;
@@ -128,6 +148,7 @@ int main(int argc, char** argv) {
     std::cout << "L1_REPLACE_POLICY   :  " << L1_REPLACE_POLICY << std::endl;
     std::cout << "L2_REPLACE_POLICY   :  " << L2_REPLACE_POLICY << std::endl;
     std::cout << "workload         :  [";
+
     for (int i = 0; i < workload.size(); ++i) {
         std::cout << workload[i];
         if (i != workload.size()-1) {
@@ -137,7 +158,7 @@ int main(int argc, char** argv) {
     std::cout << "]" << std::endl;
 
 
-    MMU* mmu = new MMU(TLB_L1, TLB_L2, PAGE_SIZE, &workload);
+    MMU* mmu = new MMU(TLB_L1, TLB_L2, PAGE_SIZE, &workload, PT_walk_time);
     mmu->start();
 
     return 0;

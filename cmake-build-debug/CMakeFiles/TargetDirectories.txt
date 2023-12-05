@@ -1,3 +1,3 @@
-/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug/CMakeFiles/main.cpp.dir
-/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/c/Users/zackHu/CLionProjects/TLB/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/zackhu/CLionProjects/5600-VM/cmake-build-debug/CMakeFiles/TLB.dir
+/Users/zackhu/CLionProjects/5600-VM/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/zackhu/CLionProjects/5600-VM/cmake-build-debug/CMakeFiles/rebuild_cache.dir
