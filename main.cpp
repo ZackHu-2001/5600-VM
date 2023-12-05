@@ -14,7 +14,6 @@ Policy* getPolicy(std::string REPLACE_POLICY) {
     if (REPLACE_POLICY == "FIFO") {
         policy = new FIFO();
     } else if (REPLACE_POLICY == "LRU") {
-        std::cout << "here" << std::endl;
         policy = new LRU();
     } else if (REPLACE_POLICY.compare("RAND") == 0) {
         policy = new RAND();
